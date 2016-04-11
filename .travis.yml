@@ -16,3 +16,6 @@ after_success:
     git config --global user.email "asouza@hp.com"
     gulp release:heroku
   fi
+env:
+  global:
+    secure: NVvNizJM5vbQRT9CEx2eDJ+QV+G79aBeoNsCuTdeeKc75Kpr0UHIkag7NZ7UQGNNeOTcANHT+Ev1JTtFXrnvUdzV8vzmOS6k7frAhH470ffbJdw1MGsRAy0B4PIAxvxhq+M3fTfuV1qGUXpciI6e8jwaSoWEHFMvFdOprtM/pyf/aQS0JBwG9Qyw2LzXao+YQBxxWVDmh97K9h1goE8+qpr4ueuAWzY8f04RgUfDvhF+C68JSYNK+gHnhILiugMfIhgmDXi4oPtkEL2LRH6T0PQUVJlgjiXGaRlBUbIZDLwx8yehEoffMI8xY1b9KmxirlmZWDPo14kiLXXCnBu1ZO0aqFOQ+6b9HcnHn7jvbMVyTpTRCxuc0jHCllaV+sXPjd49Dnb3KPS4wVRajlFVwY2YVxrX5UFLAGEyuBQD23IkdS6JgAx75aeEytRZ/peMRt++/zhiR3xQuKOdNaSY3DHgrh3gizG3M/ulNsrf/fYton5wk7evjXVl9OB6g/6Tc67f81Lif322szOTprn7/zsML672iTSBcTh+c/ikw3O+ICj//VvffUx2A6Ez0QNtxM26UaVTZ+A0eJANhEBq5i4ENgyzRyY8EfoPYojvNWgkFrSib9+LIkhrvSTNysEw6uAlLLcE8JkKELYQlqMp+4d58tCFTPVrOhGvZBubLZI=
