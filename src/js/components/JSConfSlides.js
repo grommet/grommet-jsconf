@@ -59,10 +59,12 @@ const JSConfSlides = () => {
       <Slide title='Little Game: SVG or PNG?' id='png-or-svg-game'>
         <Tiles fill={true} align='center' justify='center'>
           <Tile pad='large'>
+            <Heading tag='h2' strong={true}>#1</Heading>
             <img src='img/small-logo.png' width='96px' />
             <Heading tag='h3' strong={true}>(12kb)</Heading>
           </Tile>
           <Tile pad='large'>
+            <Heading tag='h2' strong={true}>#2</Heading>
             <img src='img/small-logo.svg' width='96px' />
             <Heading tag='h3' strong={true}>(5kb)</Heading>
           </Tile>
