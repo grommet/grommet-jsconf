@@ -9,6 +9,7 @@ import Bullet from 'grommet-presentation/components/Bullet';
 import Bullets from 'grommet-presentation/components/Bullets';
 
 import AlanAvatar from '../AlanAvatar';
+import HPELogo from '../HPELogo';
 
 const AboutMe = () => {
   return (
@@ -25,9 +26,14 @@ const AboutMe = () => {
           <Bullet item='Likes samba, forró, bossa nova, and CARNIVAL' />
         </Bullets>
       </Tile>
-      <Tile justify='center' direction='row'>
-        <Box pad='small'>
-          <GrommetLogo size='large' />
+      <Tile justify='center'>
+        <Box direction='row'>
+          <Box pad='small'>
+            <HPELogo />
+          </Box>
+          <Box pad='small'>
+            <GrommetLogo size='large' />
+          </Box>
         </Box>
         <Box pad='small'>
           <AlanAvatar />

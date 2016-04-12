@@ -3,7 +3,8 @@ import React from 'react';
 const AlanAvatar = () => {
   return (
     <svg className='logo' version='1.1' x='0' y='0' viewBox='0 0 289.51 318.5'
-      role='img' aria-label='Alan Avatar'>
+      role='img'>
+      <title>Alan Avatar</title>
       <g className='face'>
         <path fill='none' stroke='#000000' strokeWidth='8' strokeMiterlimit='10' d='M143.09 168.48c-38.99 0-70.6-34.41-70.6-76.85s31.61-76.85 70.6-76.85 70.6 34.41 70.6 76.85S182.08 168.48 143.09 168.48z'/>
         <g className='eyes'>
