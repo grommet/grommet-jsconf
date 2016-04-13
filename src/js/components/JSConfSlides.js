@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Box from 'grommet/components/Box';
 import Tile from 'grommet/components/Tile';
 import Tiles from 'grommet/components/Tiles';
 import Heading from 'grommet/components/Heading';
@@ -23,15 +24,17 @@ import TipTwo from './slides/tips/TipTwo';
 const JSConfSlides = () => {
   return (
     <Slides>
-      <Slide id='home' align='center' justify='center'>
+      <Slide id='home' align='center' justify='center' full={true}>
         <Home />
       </Slide>
       <Slide title='About Me' id='about-me'>
         <AboutMe />
       </Slide>
-      <Slide id='bay-area-carnival' align='center' justify='center'>
-        <img src='img/bay-area-carnival.gif' className='animated-git'
-          title='Two geeks dancing in front of a computer' />
+      <Slide id='bay-area-carnival'>
+        <Box align='center' justify='center'>
+          <img src='img/bay-area-carnival.gif' className='animated-git'
+            title='Two geeks dancing in front of a computer' />
+        </Box>
       </Slide>
       <Slide title='What is Accessibility?' id='what-is-accessibility'>
         <WhatIsAccessibility />
@@ -51,10 +54,11 @@ const JSConfSlides = () => {
       <Slide title='What is SVG?' id='what-is-svg'>
         <WhatIsSvg />
       </Slide>
-      <Slide title='Little Game: SVG or PNG?' id='png-or-svg'
-        align='center' justify='center'>
-        <img src='img/png-vs-svg.gif' className='animated-git'
-          title='Two men with a similar horse mask fighting' />
+      <Slide title='Little Game: SVG or PNG?' id='png-or-svg'>
+        <Box align='center' justify='center'>
+          <img src='img/png-vs-svg.gif' className='animated-git'
+            title='Two men with a similar horse mask fighting' />
+        </Box>
       </Slide>
       <Slide title='Little Game: SVG or PNG?' id='png-or-svg-game'>
         <Tiles fill={true} align='center' justify='center'>
