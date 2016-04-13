@@ -17,9 +17,14 @@ import HowToBeAGoodInterpreter from './slides/HowToBeAGoodInterpreter';
 import Demo from './slides/Demo';
 import WhatIsSvg from './slides/WhatIsSvg';
 import CreatingSVG from './slides/CreatingSVG';
+import ComplexGraphics from './slides/ComplexGraphics';
 
 import TipOne from './slides/tips/TipOne';
 import TipTwo from './slides/tips/TipTwo';
+import TipThree from './slides/tips/TipThree';
+import TipFour from './slides/tips/TipFour';
+
+import TrickOne from './slides/tricks/TrickOne';
 
 const JSConfSlides = () => {
   return (
@@ -82,6 +87,18 @@ const JSConfSlides = () => {
       </Slide>
       <Slide title='Tip #2: Implement your icon as a React component' id='tip-2'>
         <TipTwo />
+      </Slide>
+      <Slide title='Tip #3: Create Anchor and Button components that accept icon' id='tip-3'>
+        <TipThree />
+      </Slide>
+      <Slide title='Tip #4: Enable components to have custom a11y titles.' id='tip-4'>
+        <TipFour />
+      </Slide>
+      <Slide title='SVG for complex graphics' id='complex-graphics'>
+        <ComplexGraphics />
+      </Slide>
+      <Slide title='Trick #1: Use tabindex, role img, title and desc' id='trick-1'>
+        <TrickOne />
       </Slide>
     </Slides>
   );
