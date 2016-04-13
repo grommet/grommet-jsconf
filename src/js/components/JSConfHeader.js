@@ -5,7 +5,7 @@ import JSConfLogo from './JSConfLogo';
 
 const JSConfHeader = () => {
   return (
-    <Header large={true} float={true} fixed={true}
+    <Header large={true} float={true}
       pad={{horizontal: 'large', vertical: 'medium'}}
       align='center' justify='center'>
       <JSConfLogo />

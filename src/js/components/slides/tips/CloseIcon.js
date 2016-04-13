@@ -40,4 +40,4 @@ Icon.defaultProps = {
 
 Icon.icon = true;
 
-Icon.displayName = 'Close';
+Icon.displayName = 'CloseIcon';

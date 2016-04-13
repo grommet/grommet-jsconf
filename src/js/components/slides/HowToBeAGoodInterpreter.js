@@ -16,7 +16,7 @@ const HowToBeAGoodInterpreter = () => {
           <Bullet item='much more...' />
         </Bullets>
       </Bullet>
-      <Bullet item='Understand and follow WCAG guidelines'>
+      <Bullet item='Understand and follow WCAG'>
         <Bullets>
           <Anchor href='https://www.w3.org/TR/WCAG20/' target='_blank'>
             Web Content Accessibility Guidelines

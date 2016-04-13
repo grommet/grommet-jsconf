@@ -7,25 +7,22 @@ import LinkIcon from 'grommet/components/icons/base/Link';
 
 import Demo from 'grommet-presentation/components/Demo';
 
-import CloseIcon from './CloseIcon';
+import ChartOne from './ChartOne';
 
 Box.displayName = 'Box';
+Anchor.displayName = 'Anchor';
 
 const code = (
   <Box pad={{vertical: 'medium'}} align='center'>
-    <Box direction='row'>
-      <CloseIcon />
-      <CloseIcon size='large' />
-      <CloseIcon size='huge' colorIndex='brand' />
-    </Box>
+    <ChartOne />
   </Box>
 );
 
-const explanation = 'Abstracts the complexities of adding accessibility and dynamic options to icons';
+const explanation = 'Better than nothing but does not scale well. Reads too much content.';
 
-const TipTwo = () => {
+const TrickOne = () => {
   const codepenAnchor = (
-    <Anchor href='http://codepen.io/alansouzati/pen/xVYaVw?editors=0010'
+    <Anchor href='http://codepen.io/alansouzati/pen/aNYvoj?editors=0010'
       target='_blank' label='CodePen' icon={<LinkIcon />}
       a11yTitle='See in CodePen' />
   );
@@ -35,4 +32,4 @@ const TipTwo = () => {
   );
 };
 
-export default TipTwo;
+export default TrickOne;
