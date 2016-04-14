@@ -8,21 +8,21 @@ const AccessibilityAnalogy = () => {
   return (
     <div>
       <Bullets>
-        <Bullet item='Interpreter is available at JSConf'>
+        <Bullet item='Interpreter is available'>
           <Bullets>
             <Bullet item='equals access regardless of language limitation' />
           </Bullets>
         </Bullet>
-        <Bullet item='How do we feel?'>
+        <Bullet item='How do I feel?'>
           <Bullets>
             <Bullet item='Respected' />
-            <Bullet item='Someone cares about us' />
+            <Bullet item='Someone cares about me' />
             <Bullet item='Got my job done' />
           </Bullets>
         </Bullet>
       </Bullets>
       <Quote author='Me'>
-        As developers we need to play more the interpreter role.
+        As developers we need to play the interpreter role more.
       </Quote>
     </div>
   );
