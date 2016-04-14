@@ -4,6 +4,7 @@ import Box from 'grommet/components/Box';
 import Tile from 'grommet/components/Tile';
 import Tiles from 'grommet/components/Tiles';
 import Heading from 'grommet/components/Heading';
+import Paragraph from 'grommet/components/Paragraph';
 
 import Slides from 'grommet-presentation/components/Slides';
 import Slide from 'grommet-presentation/components/Slide';
@@ -14,6 +15,8 @@ import AboutMe from './slides/AboutMe';
 import WhyAccessibility from './slides/WhyAccessibility';
 import AccessibilityAnalogy from './slides/AccessibilityAnalogy';
 import HowToBeAGoodInterpreter from './slides/HowToBeAGoodInterpreter';
+import GoodInterpreterAnchor from './slides/GoodInterpreterAnchor';
+import GoodInterpreterParagraph from './slides/GoodInterpreterParagraph';
 import Demo from './slides/Demo';
 import WhatIsSvg from './slides/WhatIsSvg';
 import CreatingSVG from './slides/CreatingSVG';
@@ -25,6 +28,8 @@ import TipThree from './slides/tips/TipThree';
 import TipFour from './slides/tips/TipFour';
 
 import TrickOne from './slides/tricks/TrickOne';
+import TrickTwo from './slides/tricks/TrickTwo';
+import TrickThree from './slides/tricks/TrickThree';
 
 const JSConfSlides = () => {
   return (
@@ -47,11 +52,26 @@ const JSConfSlides = () => {
       <Slide title='Why Accessibility?' id='why-accessibility'>
         <WhyAccessibility />
       </Slide>
-      <Slide title='Accessibility Analogy' id='a11y-analogy'>
+      <Slide title='User with Disabilities' id='example-disabilities'
+        align='center' justify='center'>
+        <Tiles fill={true} align='center'>
+          <Tile pad='large'><img src='img/low_vision.jpg'
+            title='low vision user reading screen' /></Tile>
+          <Tile pad='large'><img src='img/blind.jpg'
+            title='blind user using screen reader' /></Tile>
+        </Tiles>
+      </Slide>
+      <Slide title='Accessibility @ JSConf' id='a11y-analogy'>
         <AccessibilityAnalogy />
       </Slide>
       <Slide title='How to be a good interpreter?' id='good-interpreter'>
         <HowToBeAGoodInterpreter />
+      </Slide>
+      <Slide title='Are you following HTML specs?' id='good-interpreter-1'>
+        <GoodInterpreterAnchor />
+      </Slide>
+      <Slide title='Are you following HTML specs?' id='good-interpreter-2'>
+        <GoodInterpreterParagraph />
       </Slide>
       <Slide id='demo'>
         <Demo />
@@ -59,8 +79,8 @@ const JSConfSlides = () => {
       <Slide title='What is SVG?' id='what-is-svg'>
         <WhatIsSvg />
       </Slide>
-      <Slide title='Little Game: SVG or PNG?' id='png-or-svg'>
-        <Box align='center' justify='center'>
+      <Slide title='SVG vs PNG, Fight!' id='png-or-svg'>
+        <Box align='center' justify='center' pad='small'>
           <img src='img/png-vs-svg.gif' className='animated-git'
             title='Two men with a similar horse mask fighting' />
         </Box>
@@ -70,12 +90,22 @@ const JSConfSlides = () => {
           <Tile pad='large'>
             <Heading tag='h2' strong={true}>#1</Heading>
             <img src='img/small-logo.png' width='96px' />
-            <Heading tag='h3' strong={true}>(12kb)</Heading>
           </Tile>
           <Tile pad='large'>
             <Heading tag='h2' strong={true}>#2</Heading>
             <img src='img/small-logo.svg' width='96px' />
-            <Heading tag='h3' strong={true}>(5kb)</Heading>
+          </Tile>
+        </Tiles>
+      </Slide>
+      <Slide title='Compare: SVG and PNG' id='png-or-svg-result'>
+        <Tiles fill={true} align='center' justify='center'>
+          <Tile pad='large'>
+            <Heading tag='h3' strong={true}>#1 PNG (12kb)</Heading>
+            <img src='img/small-logo.png' width='96px' />
+          </Tile>
+          <Tile pad='large'>
+            <Heading tag='h3' strong={true}>#2 SVG (5kb)</Heading>
+            <img src='img/small-logo.svg' width='96px' />
           </Tile>
         </Tiles>
       </Slide>
@@ -97,8 +127,22 @@ const JSConfSlides = () => {
       <Slide title='SVG for complex graphics' id='complex-graphics'>
         <ComplexGraphics />
       </Slide>
-      <Slide title='Trick #1: Use tabindex, role img, title and desc' id='trick-1'>
+      <Slide title='Trick #1: Tabindex, role img, title and desc' id='trick-1'>
         <TrickOne />
+      </Slide>
+      <Slide title='Trick #2: Tabindex in each child with role of application' id='trick-2'>
+        <TrickTwo />
+      </Slide>
+      <Slide title='Trick #3: Tabindex, role img in each child and role of application' id='trick-3'>
+        <TrickThree />
+      </Slide>
+      <Slide title='Last Tip: Be Consistent' id='last-tip'>
+        <Paragraph size='large'>Whatever "trick" you choose, apply the same one to all your data graphics.</Paragraph>
+      </Slide>
+      <Slide id='thank-you' align='center' justify='center' full={true}>
+        <Heading strong={true} align='center'>
+          Thank you!
+        </Heading>
       </Slide>
     </Slides>
   );

@@ -11,7 +11,7 @@ const WhatIsSvg = () => {
       <Bullet item='Common for iconography and graphics' />
       <Bullet item='Why?'>
         <Bullets>
-          <Bullet item='Can be easily manipulated/changed' />
+          <Bullet item='Can be easily manipulated' />
           <Bullet item='Has a small footprint' />
         </Bullets>
       </Bullet>

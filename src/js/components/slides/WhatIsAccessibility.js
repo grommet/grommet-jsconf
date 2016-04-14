@@ -11,6 +11,11 @@ const WhatIsAccessibility = () => {
     <div>
       <Bullets>
         <Bullet item='Provide equal access to products, devices, and services' />
+        <Bullet item='Digital Accessibility'>
+          <Bullets>
+            <Bullet item='User with disabilities to have access to internet, software, mobile devices...' />
+          </Bullets>
+        </Bullet>
         <Bullet item='Usability' />
       </Bullets>
 
