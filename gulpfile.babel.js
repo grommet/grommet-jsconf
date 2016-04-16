@@ -25,9 +25,10 @@ gulp.task('release:createTmp', (done) => {
   });
 });
 
-gulp.task('release:heroku', ['dist', 'release:createTmp'], (done) => {
+gulp.task('release:gh-pages', ['release:createTmp'], (done) => {
   if (process.env.CI) {
-    git.clone('https://' + process.env.GH_TOKEN + '@github.com/grommet/grommet-jsconf.git',
+    git.clone(
+      'https://' + process.env.GH_TOKEN + '@github.com/grommet/jsconf2016.git',
       {
         cwd: './tmp/'
       },
@@ -36,17 +37,15 @@ gulp.task('release:heroku', ['dist', 'release:createTmp'], (done) => {
           throw err;
         }
 
-        process.chdir('./tmp/grommet-jsconf');
-        git.checkout('heroku', (err) => {
+        process.chdir('./tmp/jsconf2016');
+        git.checkout('gh-pages', (err) => {
           if (err) {
             throw err;
           }
 
-          gulp.src([
-            '../../**',
-            '!../../.gitignore',
-            '!../../.travis.yml'])
-          .pipe(gulp.dest('./')).on('end', () => {
+          del.sync(['./**/*']);
+
+          gulp.src('../../dist/**').pipe(gulp.dest('./')).on('end', () => {
             git.status({
               args: '--porcelain'
             }, (err, stdout) => {
@@ -59,8 +58,8 @@ gulp.task('release:heroku', ['dist', 'release:createTmp'], (done) => {
                   .pipe(git.add({
                     args: '--all'
                   }))
-                  .pipe(git.commit('Heroku dev version update.')).on('end', () => {
-                    git.push('origin', 'heroku', { quiet: true }, (err) => {
+                  .pipe(git.commit('gh-pages dev version update.')).on('end', () => {
+                    git.push('origin', 'gh-pages', { quiet: true }, (err) => {
                       if (err) {
                         throw err;
                       }
@@ -70,7 +69,7 @@ gulp.task('release:heroku', ['dist', 'release:createTmp'], (done) => {
                     });
                   });
               } else {
-                console.log('No difference since last commit, skipping heroku release.');
+                console.log('No difference since last commit, skipping gh-pages release.');
 
                 process.chdir(__dirname);
                 done();
@@ -81,7 +80,7 @@ gulp.task('release:heroku', ['dist', 'release:createTmp'], (done) => {
       }
     );
   } else {
-    console.warn('Skipping release. Release:heroku task should be executed by CI only.');
+    console.warn('Skipping release. Release:gh-pages task should be executed by CI only.');
   }
 });
 

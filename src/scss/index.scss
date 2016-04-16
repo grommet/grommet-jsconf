@@ -3,6 +3,12 @@
 
 @import '~grommet-presentation/scss/index';
 
+.box--pad-vertical-large {
+  @include media-query(palm) {
+    padding: 48px 12px;
+  }
+}
+
 iframe.sample-container {
   height: calc(100vh - #{$header-height * 2.7});
   width: 100%;
