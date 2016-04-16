@@ -9,6 +9,11 @@
   }
 }
 
+.quote {
+  border-style: none;
+  border-width: 0;
+}
+
 iframe.sample-container {
   height: calc(100vh - #{$header-height * 2.7});
   width: 100%;
