@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
 import Tile from 'grommet/components/Tile';
 import Tiles from 'grommet/components/Tiles';
@@ -85,7 +86,7 @@ const JSConfSlides = () => {
             title='Two men with a similar horse mask fighting' />
         </Box>
       </Slide>
-      <Slide title='Little Game: SVG or PNG?' id='png-or-svg-game'>
+      <Slide title='¿Dónde está Wally(SVG)?' id='png-or-svg-game'>
         <Tiles fill={true} align='center' justify='center'>
           <Tile pad='large'>
             <Heading tag='h2' strong={true}>#1</Heading>
@@ -142,6 +143,20 @@ const JSConfSlides = () => {
       <Slide id='thank-you' align='center' justify='center' full={true}>
         <Heading strong={true} align='center'>
           Thank you!
+        </Heading>
+
+        <Heading tag='h2' align='center'>
+          @alansouzati
+        </Heading>
+
+        <Heading tag='h2' align='center'>
+          <Anchor primary={true} href='http://grommet.io/' target='_blank'
+            label='grommet.io' />
+        </Heading>
+
+        <Heading tag='h2' align='center'>
+          <Anchor primary={true} href='http://slackin.grommet.io/'
+            target='_blank' label='slackin.grommet.io' />
         </Heading>
       </Slide>
     </Slides>

@@ -13,7 +13,7 @@ setDefaultTitle('JSConf 2016');
 
 const Main = () => {
   return (
-    <App centered={false}>
+    <App>
       <JSConfHeader />
       <JSConfSlides />
     </App>
